@@ -1,76 +1,80 @@
-CV2 Projects Repository
+# 🖼️ Computer CV Projects Repository
 
-This repository contains two projects built using OpenCV (cv2) and NumPy. Both projects demonstrate the application of computer vision techniques for real-time tasks.
+Welcome to the **Computer CV** repository! Here you'll find two exciting projects built with **OpenCV (cv2)** and **NumPy**, showcasing real-time computer vision techniques. Whether you're a beginner or a seasoned developer, these projects are a great way to dive into the world of image processing and computer vision.
 
-📌 Projects
-Project 1: Drawing Colors with Object Color Detection
+---
 
-This project allows you to draw on the screen using objects of specific colors detected by the webcam.
+## 📦 Projects Overview
 
-Concepts Used:
+### 🎨 Project 1: Drawing Colors with Object Color Detection
 
-HSV color space for color detection
+Create digital art by simply moving colored objects in front of your webcam!
 
-Contour detection to find object position
+**Key Concepts:**
+- **HSV Color Space:** Robust color detection across lighting conditions
+- **Contour Detection:** Pinpointing object position in real-time
+- **OpenCV Video Processing:** Instant feedback and drawing
 
-Real-time video processing with OpenCV
+**How It Works:**
+1. The webcam detects objects of predefined colors.
+2. Each color is mapped to a specific drawing color (BGR format).
+3. The object’s position is tracked, turning it into a "virtual paintbrush" that draws on the screen.
 
-How It Works:
+---
 
-The webcam detects objects of predefined colors.
+### 📄 Project 2: Document Scanner
 
-Each detected color is assigned a specific drawing color (BGR format).
+Turn your webcam into a handy document scanner using perspective transformation!
 
-The position of the detected object is tracked, and a circle is drawn at its coordinates, creating a "virtual paintbrush."
+**Key Concepts:**
+- **Image Preprocessing:** Grayscale conversion, blurring, edge detection, dilation, and erosion
+- **Contour Detection:** Locating the largest quadrilateral (your document)
+- **Perspective Warp:** Transforming your document for a crisp, top-down scanned effect
 
-Project 2: Document Scanner
+**How It Works:**
+1. The webcam captures and preprocesses the image to highlight edges.
+2. The largest 4-point contour (assumed to be the document) is detected.
+3. A perspective transform gives a scanned, top-down view of your document.
 
-This project simulates a document scanner using perspective transformation.
+---
 
-Concepts Used:
+## ⚙️ Requirements
 
-Image preprocessing (grayscale, blur, edge detection, dilation, erosion)
+Before you begin, ensure you have the following dependencies installed:
 
-Contour detection to identify the largest quadrilateral (document)
-
-Reordering points and applying perspective warp for scanning effect
-
-How It Works:
-
-The webcam captures an image and preprocesses it to highlight edges.
-
-Contours are analyzed to find the largest 4-point shape (document).
-
-A perspective transform is applied to give a top-down scanned view of the document.
-
-⚙️ Requirements
-
-Make sure you have the following installed:
-
+```bash
 pip install opencv-python numpy
+```
 
-▶️ How to Run
+---
 
-Clone the repository:
+## ▶️ Getting Started
 
-git clone https://github.com/yourusername/your-repo.git
+1. **Clone the repository:**
+    ```bash
+    git clone https://github.com/Sharanyea/Computer-CV.git
+    ```
+2. **Navigate to the project folder:**
+    ```bash
+    cd Computer-CV
+    ```
+3. **Run the scripts:**
+    ```bash
+    python project1.py   # Drawing Colors with Object Detection
+    python project2.py   # Document Scanner
+    ```
+
+> **Tip:** Press `q` in the webcam window to exit.
+
+---
+
+## 🚀 Future Improvements
+
+- [ ] Add GUI controls for custom color selection
+- [ ] Save scanned documents as PDF or image files
+- [ ] Multi-color brush and eraser functionality for Project 1
+
+---
 
 
-Navigate into the project folder.
-
-Run the scripts:
-
-python project1.py   # For Drawing Colors
-python project2.py   # For Document Scanner
-
-
-Press q to exit the webcam window.
-
-
-🚀 Future Improvements
-
-Add GUI controls to select custom colors.
-
-Save scanned documents as PDF or image files.
-
-Multi-color brush and eraser functionality for Project 1.
+**Happy Coding! 👩‍💻👨‍💻**
